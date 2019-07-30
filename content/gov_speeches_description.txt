@@ -1,0 +1,5 @@
+The gov_speeches folder includes all scraped documents from "https://www.gov.za/speeches" on 28/07/2019. File name schemas are as follows:
+d-MMM-YYYY - Title of Speech (i.e. "1-Apr-2011 - Budget vote address for the Free State Department of Education by the Honourable MEC for Education Mr PHI Makgoe Free State Provincial Legislature Hertzogville")
+
+Titles with illegal characters have been removed and only include the date of the document.
+Each document containts all text <p> elements in the content block of the article seperated by \n each.

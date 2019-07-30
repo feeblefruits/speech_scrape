@@ -1,0 +1,7 @@
+The polity_speeches folder includes all scraped documents from "https://www.polity.org.za/page/speeches/" on 28/07/2019. File name schemas are as follows:
+d-Month-YYYY - Title of Speech (i.e. "1st April 2016  - DBE Angie Motshekga Address by Minister of Basic Education at the Minister s meeting with district directors Sol Plaatje house Pretoria 31 03 2016 ")
+
+Titles with illegal characters have been removed and only include the date of the document.
+Each document containts all text <p> elements in the content block of the article seperated by \n each.
+
+NOTE: The <p> tags also scraped add text which means the text "Advertisement" appears a couple of times in between the content paragraphs.
