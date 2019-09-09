@@ -19,7 +19,7 @@ headers = {
 base_url = "https://api.pmg.org.za/hansard/?page="
 collection = [] #store list of all collected hansard speeches
 cleanr = re.compile("<.*?>|&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6});|[\n\r\t]")
-file_path = '/content/drive/My Drive/Colab_Notebooks/m_g/hansard_speeches/' # Change path to suit local dir
+file_path = '../hansard_speeches/' # Change path to suit local dir
 
 
 #   crawl though available pages
@@ -33,31 +33,11 @@ for page in range(1, 100,1):
         # collect hansard details from each page
         for hansard in all_hansards:
             d = {}
-            # d["house_id"] = hansard["house_id"]
-            # d["summary"] = hansard["summary"]
-            # d["url"] = hansard["url"]
-            # d["featured"] = hansard["featured"]
-            # d["chairperson"] = hansard["chairperson"]
-            # d["type"] = hansard["type"]
-            # d["id"] = hansard["id"]
-            # d["nid"] = hansard["nid"]
-            # d["member_id"] = hansard["member_id"]
-            # d["committee_id"] = hansard["committee_id"]
-            # d["updated_at"] = hansard["updated_at"]
             d["title"] = hansard["title"]
             d["date"] = hansard["date"]
-            # d["public_participation"] = hansard["public_participation"]
-            # d["created_at"] = hansard["created_at"]
-            # clean the text from the html tags
-            # cleanr = re.compile("<.*?>|&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6});|[\n\r\t]")
-            # body = hansard["body"]
-            # d["speech"] = re.sub(cleanr, ' ', body)
-
             d["speech"]  = hansard['body']
             #   collect data in a list
             collection.append(d)
-            #   store items data in a dataframe & save to csv
-            # df = pd.DataFrame(collection) #.to_csv("data/pmg_hansards.csv")
     else:
         break
 
