@@ -1,0 +1,5 @@
+The hansard_speeches folder includes all scraped documents from "https://api.pmg.org.za/hansard/" on 13/09/2019. File name schemas are as follows:
+dd-MM-YYYY - Title of Speech (i.e. "8-May-2015 - EPC_ Debate on Vote No 39  - Rural Development and Land Reform")
+
+Titles with illegal characters have been removed and only include the date of the document.
+Each document contains all text <p> elements in the content block of the article separated by \n each.
